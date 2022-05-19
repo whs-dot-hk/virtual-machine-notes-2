@@ -17,7 +17,7 @@ EOF
 virt-install \
   --disk size=100 \
   --initrd-inject preseed.cfg \
-  --location http://ftp.debian.org/debian/dists/bullseye/main/installer-amd64 \
+  --location https://deb.debian.org/debian/dists/bullseye/main/installer-amd64/ \
   --memory 2048 \
   --name debian11 \
   --network=bridge:virbr0 \
