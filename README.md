@@ -1,3 +1,4 @@
+# Debian 11
 ```sh
 curl -o preseed.cfg https://www.debian.org/releases/bullseye/example-preseed.txt
 cat <<EOF >> preseed.cfg
@@ -22,5 +23,31 @@ virt-install \
   --name debian11 \
   --network=bridge:virbr0 \
   --os-variant debian11 \
+  --vcpus 2
+```
+
+# Fedora 36
+```sh
+cat <<EOF >> anaconda-ks.cfg
+autopart
+clearpart --initlabel
+keyboard --xlayouts=us
+lang en_US.UTF-8
+reboot
+timezone --utc Asia/Hong_Kong
+user --name whs --password magic --groups wheel
+EOF
+```
+
+```sh
+virt-install \
+  --disk size=8 \
+  --extra-args="inst.ks=file:/anaconda-ks.cfg" \
+  --initrd-inject anaconda-ks.cfg \
+  --location https://dl.fedoraproject.org/pub/fedora/linux/releases/36/Server/x86_64/os/ \
+  --memory 2048 \
+  --name fedora36 \
+  --network=bridge:virbr0 \
+  --os-variant fedora36 \
   --vcpus 2
 ```
