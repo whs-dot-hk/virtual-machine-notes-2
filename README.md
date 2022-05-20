@@ -41,7 +41,7 @@ EOF
 
 ```sh
 virt-install \
-  --disk size=8 \
+  --disk size=100 \
   --extra-args="inst.ks=file:/anaconda-ks.cfg" \
   --initrd-inject anaconda-ks.cfg \
   --location https://dl.fedoraproject.org/pub/fedora/linux/releases/36/Server/x86_64/os/ \
