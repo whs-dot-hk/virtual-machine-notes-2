@@ -38,6 +38,11 @@ echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
 source ~/.bashrc
 ```
 
+## Install ansible
+```sh
+pip install --upgrade ansible
+```
+
 # Fedora 36
 ```sh
 cat <<EOF >> anaconda-ks.cfg
