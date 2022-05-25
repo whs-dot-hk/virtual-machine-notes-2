@@ -26,6 +26,18 @@ virt-install \
   --vcpus 2
 ```
 
+## Install pip
+```sh
+sudo apt-get install -y python3-distutils
+curl -O https://bootstrap.pypa.io/get-pip.py
+python3 get-pip.py
+```
+
+```sh
+echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
+source ~/.bashrc
+```
+
 # Fedora 36
 ```sh
 cat <<EOF >> anaconda-ks.cfg
