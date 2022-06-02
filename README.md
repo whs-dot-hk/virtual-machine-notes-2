@@ -16,11 +16,11 @@ EOF
 
 ```sh
 virt-install \
-  --disk size=100 \
+  --disk size=20 \
   --initrd-inject preseed.cfg \
   --location https://deb.debian.org/debian/dists/bullseye/main/installer-amd64/ \
   --memory 2048 \
-  --name debian11 \
+  --name debian11-1 \
   --network=bridge:virbr0 \
   --os-variant debian11 \
   --vcpus 2
