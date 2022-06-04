@@ -2,7 +2,8 @@
 ```sh
 curl -o preseed.cfg https://www.debian.org/releases/bullseye/example-preseed.txt
 cat <<EOF >> preseed.cfg
-d-i grub-installer/bootdev  string default
+d-i grub-installer/bootdev string default
+d-i netcfg/get_hostname string debian11-1
 d-i passwd/root-login boolean false
 d-i passwd/user-fullname string whs
 d-i passwd/user-password password magic
