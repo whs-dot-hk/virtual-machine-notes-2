@@ -28,6 +28,16 @@ virt-install \
 )
 ```
 
+## Install cguv
+```sh
+sudo apt-get install -y
+  curl \
+  git \
+  unzip \
+  vim \
+  ;
+```
+
 ## Install pip
 ```sh
 sudo apt-get install -y python3-distutils
