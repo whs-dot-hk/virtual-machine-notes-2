@@ -30,7 +30,7 @@ virt-install \
 
 ## Install cguv
 ```sh
-sudo apt-get install -y
+sudo apt-get install -y \
   curl \
   git \
   unzip \
